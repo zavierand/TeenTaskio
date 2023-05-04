@@ -1,13 +1,19 @@
 import * as React from 'react';
 import {View, Text, ScrollView} from 'react-native'
 
-export function SettingsScreen()
+function SettingsScreen() 
 {
-    return(
-        <ScrollView>
-            <Text>
-                This is the Settings Screen.
-            </Text>
-        </ScrollView>
-    );
+  return (
+    <View style={{ 
+      flex: 1, 
+      justifyContent: 'center', 
+      alignItems: 'center'
+      }}>
+      <Text> TeenTaskio Settings! </Text>
+      <Button title='Click for Home'/>
+      <Button title='Click for Profile'/>
+    </View>
+  );
 }
+
+export default SettingsScreen;
