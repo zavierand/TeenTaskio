@@ -1,10 +1,12 @@
+import React from 'react';
 import { StatusBar } from 'expo-status-bar';
+import NavBar from './components/navbar.jsx'
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>TeenTaskio first file!</Text>
+      <NavBar />
       <StatusBar style="auto" />
     </View>
   );
