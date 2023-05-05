@@ -1,7 +1,7 @@
 // dependencies
 import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { Text, StyleSheet, View, Button } from 'react-native';
+import { Text, View, ScrollView, SafeAreaView } from 'react-native';
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -30,4 +30,5 @@ export default function App() {
   );
 }
 
-//backgroundColor: '#192C41'
+/*backgroundColor: '#192C41'
+*/

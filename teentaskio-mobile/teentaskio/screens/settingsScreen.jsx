@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {View, Text } from 'react-native'
+import { Text, View, ScrollView, SafeAreaView } from 'react-native';
 
 function SettingsScreen() 
 {

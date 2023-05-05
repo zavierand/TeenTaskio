@@ -1,18 +1,21 @@
+// dependencies
 import * as React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import {Text, View, StyleSheet } from 'react-native'
+import { StatusBar } from 'expo-status-bar'; 
+import { Text, View, ScrollView, SafeAreaView, StyleSheet } from 'react-native';
+import { colors } from '../config/themes.js';
+
+// components
+import MainContainer from '../components/mainContainer.jsx';
 
 function HomeScreen() 
 {
-  return (
-    <View style={{ 
-      flex: 1, 
-      justifyContent: 'top', 
-      alignItems: 'center',
-      }}>
-      <Text> TeenTaskio Home Feed! </Text>
-    </View>
-  );
+    let activeColor = colors;
+
+    return (
+      <View>
+        <MainContainer />
+      </View>
+    );
 }
 
 const styles = StyleSheet.create(
