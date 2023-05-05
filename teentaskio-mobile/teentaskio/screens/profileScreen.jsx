@@ -1,30 +1,26 @@
-// dependencies
+import { StyleSheet } from 'react-native';
 import * as React from 'react';
-import { View, Text } from 'react-native';
-import { colors } from '../config/themes.js';
+import MainContainer from '../components/mainContainer.jsx';
+import StyledText from '../components/Text/styledText.jsx'; 
+import NewsFeed from '../components/News/newsfeed.jsx'
 
-// components
-
-// screens
-
-// component
 function ProfileScreen() 
 {
-    let activeColor = colors;
-
-    return (
-      <View style={{ 
-        flex: 1, 
-        justifyContent: 'center', 
-        alignItems: 'center',
-        backgroundColor: activeColor.darkPrimary,
-        }}>
-        <Text> TeenTaskio Profile! </Text>
-      </View>
-
+  return (
+    <MainContainer>
+        <StyledText style={styles.title} large> Profile </StyledText>
+        <NewsFeed />
+    </MainContainer>
   );
 }
 
-//backgroundColor: '#192C41' - dark mode color
+const styles = StyleSheet.create( {
+    title:
+    {
+        alignItems: 'center',
+        marginTop: 25,
+        marginLeft: 25,
+    }
+});
 
 export default ProfileScreen;

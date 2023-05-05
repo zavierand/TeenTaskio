@@ -4,12 +4,11 @@ import MainContainer from '../components/mainContainer.jsx';
 import StyledText from '../components/Text/styledText.jsx'; 
 import NewsFeed from '../components/News/newsfeed.jsx'
 
-function TrendingScreen() 
+function SearchScreen() 
 {
   return (
     <MainContainer>
-        <StyledText style={styles.title} large> Trending </StyledText>
-        <NewsFeed />
+        <StyledText style={styles.title} large> Search </StyledText>
     </MainContainer>
   );
 }
@@ -23,4 +22,4 @@ const styles = StyleSheet.create( {
     }
 });
 
-export default TrendingScreen;
+export default SearchScreen;

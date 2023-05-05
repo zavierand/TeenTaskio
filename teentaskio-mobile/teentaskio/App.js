@@ -14,6 +14,7 @@ import HomeScreen from './screens/homeScreen.jsx';
 import SettingsScreen from './screens/settingsScreen.jsx';
 import ProfileScreen from './screens/profileScreen.jsx';
 import TrendingScreen from './screens/trendingScreen.jsx';
+import SearchScreen from './screens/searchScreen.jsx';
 
 const Tab = createBottomTabNavigator();
 
@@ -23,6 +24,7 @@ export default function App() {
         <Tab.Navigator>
             <Tab.Screen name="Feed" component={HomeScreen} />
             <Tab.Screen name="Trending" component={TrendingScreen} />
+            <Tab.Screen name="Search" component={SearchScreen} />
             <Tab.Screen name="Settings" component={SettingsScreen} />
             <Tab.Screen name="Profile" component={ProfileScreen} />
         </Tab.Navigator>

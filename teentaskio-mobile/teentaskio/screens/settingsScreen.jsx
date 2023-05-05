@@ -1,19 +1,26 @@
 import * as React from 'react';
-import { Text, View, ScrollView, SafeAreaView } from 'react-native';
+import { Text, View, ScrollView, SafeAreaView, StyleSheet } from 'react-native';
+import MainContainer from '../components/mainContainer.jsx';
+import StyledText from '../components/Text/styledText.jsx';
 
 function SettingsScreen() 
 {
   return (
-    <View style={{ 
-      flex: 1, 
-      justifyContent: 'center', 
-      alignItems: 'center',
-    }}>
-    <Text> TeenTaskio Settings! </Text>
-    </View>
+    <MainContainer>
+      <StyledText style={styles.title} large>
+        Settings
+      </StyledText>
+    </MainContainer>
   );
 }
 
-//backgroundColor: '#192C41' - dark mode color
+const styles = StyleSheet.create( {
+  title:
+  {
+      alignItems: 'center',
+      marginTop: 25,
+      marginLeft: 25,
+  }
+});
 
 export default SettingsScreen;
