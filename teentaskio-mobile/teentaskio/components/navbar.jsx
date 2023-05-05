@@ -1,18 +1,14 @@
-import React, { Component } from 'react';
-import SettingsScreen from '../components/settingsScreen.jsx';
-import HomeScreen from '../components/homeScreen.jsx'
-import ProfileScreen from '../components/profileScreen.jsx'
+import * as React from 'react';
+import SettingsScreen from './components/settingsScreen.jsx';
+import HomeScreen from './screens/homeScreen.jsx'
+import ProfileScreen from './components/profileScreen.jsx'
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { 
-    View, 
-    Button, 
-    Text,
-    ScrollView } from 'react-native';
+import { View, Button, Text, ScrollView } from 'react-native';
 
 const Tab = createBottomTabNavigator();
 
-export default function() 
+function NavBar() 
 {
     return(
         <NavigationContainer>
@@ -24,3 +20,5 @@ export default function()
         </NavigationContainer>
     );
 }
+
+export default NavBar;

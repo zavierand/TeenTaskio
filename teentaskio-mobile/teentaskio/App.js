@@ -1,71 +1,31 @@
+// dependencies
 import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { Text, StyleSheet, View, Button } from 'react-native';
-//import SettingsScreen from '../components/settngsScreen'
+import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-function HomeScreen() 
-{
-  return (
-    <View style={{ 
-      flex: 1, 
-      justifyContent: 'center', 
-      alignItems: 'center',
-      //backgroundColor: '#192C41'
-      }}>
-      <Text> TeenTaskio Home! </Text>
-      <Button title='Click for Settings'/>
-      <Button title='Click for Profile'/>
-    </View>
-  );
-}
+//components
+// import NavBar from './components/navbar.jsx';
 
-function SettingsScreen() 
-{
-  return (
-    <View style={{ 
-      flex: 1, 
-      justifyContent: 'center', 
-      alignItems: 'center',
-      //backgroundColor: '#192C41'
-      }}>
-      <Text> TeenTaskio Settings! </Text>
-      <Button title='Click for Home'/>
-      <Button title='Click for Profile'/>
-    </View>
-  );
-}
-
-function ProfileScreen() 
-{
-  return (
-    <View style={{ 
-      flex: 1, 
-      justifyContent: 'center', 
-      alignItems: 'center',
-      //backgroundColor: '#192C41'
-      }}>
-      <Text> TeenTaskio Profile! </Text>
-      <Button title='Click for Home'/>
-      <Button title='Click for Settings'/>
-      
-    </View>
-
-  );
-}
+// screens
+import HomeScreen from './screens/homeScreen.jsx';
+import SettingsScreen from './screens/settingsScreen.jsx';
+import ProfileScreen from './screens/profileScreen.jsx';
+import TrendingScreen from './screens/trendingScreen.jsx';
 
 const Tab = createBottomTabNavigator();
 
 export default function App() {
-  return (
+  return(
     <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
-        <Tab.Screen name="Profile" component={ProfileScreen} />
-      </Tab.Navigator>
-      <StatusBar style="auto" />
+        <Tab.Navigator>
+            <Tab.Screen name="Feed" component={HomeScreen} />
+            <Tab.Screen name="Trending" component={TrendingScreen} />
+            <Tab.Screen name="Settings" component={SettingsScreen} />
+            <Tab.Screen name="Profile" component={ProfileScreen} />
+        </Tab.Navigator>
     </NavigationContainer>
   );
 }
