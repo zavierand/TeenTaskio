@@ -1,36 +1,30 @@
 // dependencies
-import * as React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { Text, View, ScrollView, SafeAreaView } from 'react-native';
+import React,{useEffect} from 'react';
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
+import { createStackNavigator } from '@react-navigation/stack';
+import LoginScreen from './screens/loginscreen';
+import EmployeeRegister from './screens/EmployeeRegister';
+import EmployerRegister from './screens/EmployerRegister';
 //components
 // import NavBar from './components/navbar.jsx';
 
 // screens
-import HomeScreen from './screens/homeScreen.jsx';
-import SettingsScreen from './screens/settingsScreen.jsx';
-import ProfileScreen from './screens/profileScreen.jsx';
-import TrendingScreen from './screens/trendingScreen.jsx';
-import SearchScreen from './screens/searchScreen.jsx';
 
-const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator();
 
-export default function App() {
+
+const App = () => {
   return(
     <NavigationContainer>
-        <Tab.Navigator>
-            <Tab.Screen name="Feed" component={HomeScreen} />
-            <Tab.Screen name="Trending" component={TrendingScreen} />
-            <Tab.Screen name="Search" component={SearchScreen} />
-            <Tab.Screen name="Settings" component={SettingsScreen} />
-            <Tab.Screen name="Profile" component={ProfileScreen} />
-        </Tab.Navigator>
+        <Stack.Navigator >
+          <Stack.Screen name = "TEENTASKIO" component = {LoginScreen}/>
+          <Stack.Screen name = "Employee Register" component = {EmployeeRegister}/>
+          <Stack.Screen name = "Employer Register" component = {EmployerRegister}/>
+         </Stack.Navigator> 
     </NavigationContainer>
   );
 }
-
 /*backgroundColor: '#192C41'
 */
+export default App;
